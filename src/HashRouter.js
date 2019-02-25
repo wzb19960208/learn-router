@@ -12,7 +12,7 @@ class HashRouter {
 
         // 绑定触发事件
         window.addEventListener('hashchange',(event)=>{
-            console.log(event);
+            console.log('hash mode');
             // 当前的url
             var cur = event.newURL;
             // 也有可能是首页的情况 http://localhost:3000/
@@ -30,18 +30,13 @@ class HashRouter {
 
     route(list,path){
 
-        console.log(path);
-        console.log(list);
-
         const ELEMENT = document.getElementById('router');
 
         var ele = this.list.find( item => item.path === path );
 
         if(ele === undefined){
             // 没有匹配的
-            console.log(ele);
         }else{
-            console.log(ele);
             ELEMENT.innerHTML = ele.component;
         }
     }

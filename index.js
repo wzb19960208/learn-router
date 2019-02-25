@@ -15,7 +15,7 @@ class WebRouter {
 }
 
 //路由模式
-const MODE = 'hash';  
+const MODE = 'history';  
 
 // 创建即绑定window事件，路由生效
 const webRouter = new WebRouter({
